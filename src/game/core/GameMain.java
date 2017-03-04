@@ -1,4 +1,4 @@
-package com.deep.game.core;
+package game.core;
 
 // this class is the entry point of the game
 public class GameMain

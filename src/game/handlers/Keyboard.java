@@ -1,4 +1,4 @@
-package com.deep.game.handlers;
+package game.handlers;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

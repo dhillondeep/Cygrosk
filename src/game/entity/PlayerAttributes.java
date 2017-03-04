@@ -1,4 +1,4 @@
-package com.deep.game.entity;
+package game.entity;
 
 // this class stores player attributes so that they can be reused when states change
 public class PlayerAttributes 

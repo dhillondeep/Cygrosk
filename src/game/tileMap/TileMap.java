@@ -1,13 +1,13 @@
-package com.deep.game.tileMap;
+package game.tileMap;
 
-import java.awt.Graphics;
+import game.core.GamePanel;
+import game.resources.Constants;
+import game.resources.Resources;
+
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.InputStream;
 import java.util.Scanner;
-
-import com.deep.game.core.GamePanel;
-import com.deep.game.resources.Constants;
-import com.deep.game.resources.Resources;
 
 // this class creates tiles and draw them on screen
 public class TileMap 

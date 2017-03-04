@@ -1,11 +1,9 @@
-package com.deep.game.entity;
+package game.entity;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
+import game.resources.Resources;
+
+import java.awt.*;
 import java.awt.image.BufferedImage;
-
-import com.deep.game.resources.Resources;
 
 // this class handles the HUD screen in the game
 public class HUD 

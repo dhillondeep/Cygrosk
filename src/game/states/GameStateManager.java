@@ -1,8 +1,8 @@
-package com.deep.game.states;
+package game.states;
 
-import java.awt.Graphics;
+import game.core.GamePanel;
 
-import com.deep.game.core.GamePanel;
+import java.awt.*;
 
 // this class manages all the game states
 public class GameStateManager

@@ -1,11 +1,9 @@
-package com.deep.game.entity;
+package game.entity;
 
-import java.awt.Graphics;
-import java.awt.Point;
-import java.awt.Rectangle;
+import game.tileMap.TileMap;
+
+import java.awt.*;
 import java.awt.image.BufferedImage;
-
-import com.deep.game.tileMap.TileMap;
 
 // this class is the base class for all the liquids
 public class Liquid

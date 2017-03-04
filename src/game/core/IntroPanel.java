@@ -1,13 +1,10 @@
-package com.deep.game.core;
+package game.core;
 
-import java.awt.Dimension;
+import game.resources.Constants;
+
+import javax.swing.*;
+import java.awt.*;
 import java.net.URL;
-
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
-import com.deep.game.resources.Constants;
 
 // this class creates a panel to show introduction animation
 public class IntroPanel extends JPanel

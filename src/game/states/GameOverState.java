@@ -1,13 +1,11 @@
-package com.deep.game.states;
+package game.states;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
+import game.entity.PlayerAttributes;
+import game.handlers.Mouse;
+import game.resources.Resources;
+
+import java.awt.*;
 import java.awt.image.BufferedImage;
-
-import com.deep.game.entity.PlayerAttributes;
-import com.deep.game.handlers.Mouse;
-import com.deep.game.resources.Resources;
 
 // this class handles the things when game is over
 public class GameOverState extends GameState

@@ -1,8 +1,8 @@
-package com.deep.game.core;
+package game.core;
 
-import javax.swing.JFrame;
+import game.resources.Media;
 
-import com.deep.game.resources.Media;
+import javax.swing.*;
 
 // this class create and run the game
 public class GameControl

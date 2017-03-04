@@ -1,13 +1,13 @@
-package com.deep.game.entity.enemies;
+package game.entity.enemies;
 
-import java.awt.Graphics;
+import game.core.GamePanel;
+import game.entity.Enemy;
+import game.resources.Constants;
+import game.resources.Resources;
+import game.tileMap.TileMap;
+
+import java.awt.*;
 import java.awt.image.BufferedImage;
-
-import com.deep.game.core.GamePanel;
-import com.deep.game.entity.Enemy;
-import com.deep.game.resources.Constants;
-import com.deep.game.resources.Resources;
-import com.deep.game.tileMap.TileMap;
 
 // this class controls Blocker enemy stuff
 public class Blocker extends Enemy

@@ -1,10 +1,10 @@
-package com.deep.game.tileMap;
+package game.tileMap;
 
-import java.awt.Graphics;
+import game.core.GamePanel;
+import game.resources.Resources;
+
+import java.awt.*;
 import java.awt.image.BufferedImage;
-
-import com.deep.game.core.GamePanel;
-import com.deep.game.resources.Resources;
 
 // this class controls the clouds background
 public class Clouds extends Background

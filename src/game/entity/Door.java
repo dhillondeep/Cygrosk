@@ -1,12 +1,11 @@
-package com.deep.game.entity;
+package game.entity;
 
-import java.awt.Graphics;
-import java.awt.Rectangle;
+import game.handlers.Keyboard;
+import game.resources.Resources;
+import game.tileMap.TileMap;
+
+import java.awt.*;
 import java.awt.image.BufferedImage;
-
-import com.deep.game.handlers.Keyboard;
-import com.deep.game.resources.Resources;
-import com.deep.game.tileMap.TileMap;
 
 // this class handles the door on the tile map
 public class Door 

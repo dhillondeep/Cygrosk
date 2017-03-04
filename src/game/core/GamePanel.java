@@ -1,13 +1,12 @@
-package com.deep.game.core;
+package game.core;
 
+import game.handlers.Keyboard;
+import game.handlers.Mouse;
+import game.states.GameStateManager;
+
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-
-import javax.swing.JPanel;
-
-import com.deep.game.handlers.Keyboard;
-import com.deep.game.handlers.Mouse;
-import com.deep.game.states.GameStateManager;
 
 // this class manages the game play
 public class GamePanel extends JPanel implements Runnable

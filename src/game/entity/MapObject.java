@@ -1,11 +1,10 @@
-package com.deep.game.entity;
+package game.entity;
 
-import java.awt.Graphics;
-import java.awt.Rectangle;
+import game.core.GamePanel;
+import game.tileMap.Tile;
+import game.tileMap.TileMap;
 
-import com.deep.game.core.GamePanel;
-import com.deep.game.tileMap.Tile;
-import com.deep.game.tileMap.TileMap;
+import java.awt.*;
 
 // this class is the base class for every object on the tile map
 public abstract class MapObject 

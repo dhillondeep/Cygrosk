@@ -1,4 +1,4 @@
-package com.deep.game.resources;
+package game.resources;
 
 // this class contains various constants used in the game
 public abstract class Constants

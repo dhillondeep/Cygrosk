@@ -1,10 +1,10 @@
-package com.deep.game.entity;
+package game.entity;
 
-import java.awt.Point;
+import game.core.GamePanel;
+import game.tileMap.TileMap;
+
+import java.awt.*;
 import java.awt.image.BufferedImage;
-
-import com.deep.game.core.GamePanel;
-import com.deep.game.tileMap.TileMap;
 
 // this class is the base class for all the items
 public class Item extends MapObject

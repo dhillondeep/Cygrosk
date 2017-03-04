@@ -1,34 +1,21 @@
-package com.deep.game.states;
+package game.states;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Point;
-import java.awt.Rectangle;
+import game.entity.*;
+import game.entity.enemies.*;
+import game.entity.items.Coin;
+import game.entity.items.Key;
+import game.entity.liquids.Lava;
+import game.entity.liquids.Water;
+import game.handlers.Keyboard;
+import game.resources.Constants;
+import game.resources.Resources;
+import game.tileMap.Clouds;
+import game.tileMap.TileMap;
+import game.tileMap.View;
+
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
-
-import com.deep.game.entity.Door;
-import com.deep.game.entity.Enemy;
-import com.deep.game.entity.HUD;
-import com.deep.game.entity.Item;
-import com.deep.game.entity.Liquid;
-import com.deep.game.entity.Player;
-import com.deep.game.entity.PlayerAttributes;
-import com.deep.game.entity.enemies.Blocker;
-import com.deep.game.entity.enemies.Fish;
-import com.deep.game.entity.enemies.Fly;
-import com.deep.game.entity.enemies.Slime;
-import com.deep.game.entity.enemies.Snail;
-import com.deep.game.entity.items.Coin;
-import com.deep.game.entity.items.Key;
-import com.deep.game.entity.liquids.Lava;
-import com.deep.game.entity.liquids.Water;
-import com.deep.game.handlers.Keyboard;
-import com.deep.game.resources.Constants;
-import com.deep.game.resources.Resources;
-import com.deep.game.tileMap.Clouds;
-import com.deep.game.tileMap.TileMap;
-import com.deep.game.tileMap.View;
 
 // this class controls the level 1 of the game
 public class M1Level1State extends GameState

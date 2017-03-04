@@ -1,9 +1,9 @@
-package com.deep.game.tileMap;
+package game.tileMap;
 
-import java.awt.Graphics;
+import game.core.GamePanel;
+
+import java.awt.*;
 import java.awt.image.BufferedImage;
-
-import com.deep.game.core.GamePanel;
 
 // this class is the base class for every background screen
 public abstract class Background 

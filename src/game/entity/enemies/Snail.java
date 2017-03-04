@@ -1,10 +1,10 @@
-package com.deep.game.entity.enemies;
+package game.entity.enemies;
 
-import com.deep.game.core.GamePanel;
-import com.deep.game.entity.Enemy;
-import com.deep.game.resources.Constants;
-import com.deep.game.resources.Resources;
-import com.deep.game.tileMap.TileMap;
+import game.core.GamePanel;
+import game.entity.Enemy;
+import game.resources.Constants;
+import game.resources.Resources;
+import game.tileMap.TileMap;
 
 // this class controls snail enemy stuff
 public class Snail extends Enemy

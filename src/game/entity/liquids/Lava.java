@@ -1,11 +1,11 @@
-package com.deep.game.entity.liquids;
+package game.entity.liquids;
 
-import java.awt.Point;
+import game.entity.Liquid;
+import game.resources.Resources;
+import game.tileMap.TileMap;
+
+import java.awt.*;
 import java.awt.image.BufferedImage;
-
-import com.deep.game.entity.Liquid;
-import com.deep.game.resources.Resources;
-import com.deep.game.tileMap.TileMap;
 
 // this class controls the behavior of lava on the screen
 public class Lava extends Liquid

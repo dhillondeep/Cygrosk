@@ -1,10 +1,9 @@
-package com.deep.game.resources;
-
-import java.awt.image.BufferedImage;
-import java.io.IOException;
+package game.resources;
 
 import javax.imageio.ImageIO;
-import javax.swing.SwingWorker;
+import javax.swing.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class Media extends SwingWorker<Integer, Integer>
 {

@@ -1,12 +1,12 @@
-package com.deep.game.entity;
+package game.entity;
 
-import java.awt.Graphics;
+import game.core.GamePanel;
+import game.resources.Resources;
+import game.tileMap.TileMap;
+
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
-
-import com.deep.game.core.GamePanel;
-import com.deep.game.resources.Resources;
-import com.deep.game.tileMap.TileMap;
 
 // this class controls the player behavior on the tile map
 public class Player extends MapObject

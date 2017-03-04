@@ -1,11 +1,11 @@
-package com.deep.game.entity.items;
+package game.entity.items;
+
+import game.core.GamePanel;
+import game.entity.Item;
+import game.resources.Constants;
+import game.tileMap.TileMap;
 
 import java.awt.image.BufferedImage;
-
-import com.deep.game.core.GamePanel;
-import com.deep.game.entity.Item;
-import com.deep.game.resources.Constants;
-import com.deep.game.tileMap.TileMap;
 
 // this class controls the behavior of coins on the screen
 public class Coin extends Item

@@ -1,4 +1,4 @@
-package com.deep.game.resources;
+package game.resources;
 
 import java.awt.image.BufferedImage;
 

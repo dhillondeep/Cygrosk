@@ -1,6 +1,6 @@
-package com.deep.game.states;
+package game.states;
 
-import java.awt.Graphics;
+import java.awt.*;
 
 // this is a base class for every game state
 public abstract class GameState

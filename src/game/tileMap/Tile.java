@@ -1,4 +1,4 @@
-package com.deep.game.tileMap;
+package game.tileMap;
 
 import java.awt.image.BufferedImage;
 
