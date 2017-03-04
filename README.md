@@ -10,8 +10,8 @@ A project created in Grade 12 Computer science class
 ## Contributors
 
 - Deep Dhillon <deepdhillon613@gmail.com>
-
+        
 
 ---
-## Licence & copyright
+## Licence & Copyright
 © Deep Dhillon
