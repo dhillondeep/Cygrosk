@@ -370,8 +370,6 @@ public class M1Level1State extends GameState
 			// set the color to black
 			g.setColor(Color.BLACK);
 
-			System.out.println("Draw");
-
 			// go through fade array list
 			for (int count = 0; count < fade.size(); count++)
 			{

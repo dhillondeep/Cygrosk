@@ -199,7 +199,7 @@ public class TileMap
 	
 	// fixMapPosition method will not let the tileMap move beyond its minimum and maximum x and y value
 	// this is done so tile map always stays on the screen even if it moves
-	public void fixMapPosition() 
+	private void fixMapPosition()
 	{
 		// this is for the ending
 		if(x < xMin) x = xMin;	// set the x value equal to xMin if it goes any less
@@ -269,8 +269,6 @@ public class TileMap
 		this.x += (x1 - this.x) * smoother;	// add the new value to the previous value. The counter goes negative
 		this.y += (y1- this.y) * smoother;	// add the new value to the previous value. The counter goes negative
 
-		System.out.println("Value: " + this.x + "   " + this.y);
-		
 		// check if map has enough tiles left to show. Based on that fix x and y
 		fixMapPosition();
 
