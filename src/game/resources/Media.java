@@ -110,19 +110,24 @@ public class Media extends SwingWorker<Integer, Integer>
 				 int currColumn = 0;
 				
 				// load walking
-				currColumn = loadPlayerConstants("SPRITES_WALKING_NUM", "PLAYER_WALKING", currColumn, spriteSheet, player);
+				currColumn = loadPlayerSpriteType(Constants.PLAYER_WALKING, Constants.SPRITES_WALKING_NUM,
+						currColumn, spriteSheet, player);
 
 				// load ducking
-				currColumn = loadPlayerConstants("SPRITES_DUCKING_NUM", "PLAYER_DUCKING", currColumn, spriteSheet, player);
+				currColumn = loadPlayerSpriteType(Constants.PLAYER_DUCKING, Constants.SPRITES_DUCKING_NUM,
+                        currColumn, spriteSheet, player);
 
 				// load hurt
-				currColumn = loadPlayerConstants("SPRITES_HURT_NUM", "PLAYER_HURT", currColumn, spriteSheet, player);
+				currColumn = loadPlayerSpriteType(Constants.PLAYER_HURT, Constants.SPRITES_HURT_NUM,
+                        currColumn, spriteSheet, player);
 
 				// load jumping
-				currColumn = loadPlayerConstants("SPRITES_JUMPING_NUM", "PLAYER_JUMPING", currColumn, spriteSheet, player );
+				currColumn = loadPlayerSpriteType(Constants.PLAYER_JUMPING, Constants.SPRITES_JUMPING_NUM,
+                        currColumn, spriteSheet, player );
 
 				// load standing
-				currColumn = loadPlayerConstants("SPRITES_STANDING_NUM", "PLAYER_STANDING", currColumn, spriteSheet, player);
+				loadPlayerSpriteType(Constants.PLAYER_STANDING, Constants.SPRITES_STANDING_NUM,
+                        currColumn, spriteSheet, player);
 				
 		}	
 	}
@@ -270,17 +275,18 @@ public class Media extends SwingWorker<Integer, Integer>
 		}
 	} // end loadSprites method
 
-	private int loadPlayerConstants(String aux, String aux1, int currColumn, BufferedImage spriteSheet, int player){
+	private int loadPlayerSpriteType(int playerPosition, int numSprites, int currColumn, BufferedImage spriteSheet, int player){
 
-		// temp variable
+		// store the column number since column number changes in the loop
 		int tempVal = currColumn;
 
+		// counter is used to store images in 3D array
 		int counter = 0;
 
 		// load walking or ducking or hurt or jumping or standing sprite
-		for (;currColumn < (tempVal + Constants.aux); currColumn++)
+		for (;currColumn < (tempVal + numSprites); currColumn++)
 		{
-			playerSprites[player][Constants.aux1][counter] = 
+			playerSprites[player][playerPosition][counter] =
 					grabSprite(spriteSheet, Constants.SPRITESHEET_BOX_WIDTH, 
 							Constants.SPRITESHEET_BOX_HEIGHT, player, currColumn, Constants.PLAYER_WIDTH, 
 							Constants.PLAYER_HEIGHT);
@@ -290,8 +296,7 @@ public class Media extends SwingWorker<Integer, Integer>
 		return currColumn;
 	}
 	
-	
-	
+
 	// grabSprite method grabs sub image from the big image
 	private BufferedImage grabSprite(BufferedImage sheet, int boxWidth, int boxHeight, 
 			int row, int col, int spriteWidth, int spriteHeight)
