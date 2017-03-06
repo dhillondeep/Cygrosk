@@ -298,10 +298,10 @@ public class Media extends SwingWorker<Integer, Integer>
 		return currColumn;
 	}
 
-
-	// grabSprite method grabs sub image from the big image
-	private BufferedImage grabSprite(BufferedImage sheet, int boxWidth, int boxHeight, 
-			int row, int col, int spriteWidth, int spriteHeight)
+    // grabSprite(sheet, boxWidth, boxHeight) grabs sprites from the sprite sheet, sheet,
+    // using boxWidth and boxHeight as size
+    private BufferedImage grabSprite(BufferedImage sheet, int boxWidth, int boxHeight,
+                                     int row, int col, int spriteWidth, int spriteHeight)
 	{
 		// get sub image based on the row and column
 		return sheet.getSubimage((col * boxWidth), (row * boxHeight), spriteWidth, spriteHeight);
