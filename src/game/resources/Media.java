@@ -275,6 +275,8 @@ public class Media extends SwingWorker<Integer, Integer>
 		}
 	} // end loadSprites method
 
+    // loadPlayerSpriteType(playerPosition, numSprites, currColumn, spriteSheet, player) uses all the parameters to
+    // grab certain type of player sprites from the sprite sheet provided
 	private int loadPlayerSpriteType(int playerPosition, int numSprites, int currColumn, BufferedImage spriteSheet, int player){
 
 		// store the column number since column number changes in the loop
@@ -295,7 +297,7 @@ public class Media extends SwingWorker<Integer, Integer>
 		}
 		return currColumn;
 	}
-	
+
 
 	// grabSprite method grabs sub image from the big image
 	private BufferedImage grabSprite(BufferedImage sheet, int boxWidth, int boxHeight, 
