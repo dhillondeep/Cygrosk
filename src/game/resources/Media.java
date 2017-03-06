@@ -1,5 +1,4 @@
 package game.resources;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.image.BufferedImage;
@@ -78,7 +77,7 @@ public class Media extends SwingWorker<Integer, Integer>
 		if (imageType == Constants.TYPE_PLAYER_SPRITES)
 		{
 			// load the sprite sheet
-			BufferedImage spriteSheet = load(Constants.LOC_PLAYER_SPRITESHEET);
+			BufferedImage spriteSheet = load(Constants.LOC_PLAYER_SPRITESHEET); 
 
 			// initialize the array to store the images
 			playerSprites = new BufferedImage[Constants.PLAYER_NUM][Constants.SPRITES_TYPE_NUM][];
@@ -106,91 +105,27 @@ public class Media extends SwingWorker<Integer, Integer>
 			// go through the for loop so that all players' sprite can be obtained
 			for (int player = 0; player < Constants.PLAYER_NUM; player++) 
 			{
+
 				// start with the current column position to 0
-				int currColumn = 0;
+				 int currColumn = 0;
+				
+				// load walking
+				currColumn = loadPlayerConstants("SPRITES_WALKING_NUM", "PLAYER_WALKING", currColumn, spriteSheet, player);
 
-				// temp variable
-				int tempVal = currColumn;
-
-				int counter = 0;
-
-				// load walking sprite
-				for (;currColumn < Constants.SPRITES_WALKING_NUM; currColumn++)
-				{
-					playerSprites[player][Constants.PLAYER_WALKING][counter] = 
-							grabSprite(spriteSheet, Constants.SPRITESHEET_BOX_WIDTH, 
-									Constants.SPRITESHEET_BOX_HEIGHT, player, currColumn, Constants.PLAYER_WIDTH, 
-									Constants.PLAYER_HEIGHT);
-
-					++counter;
-				}
-
-
-				// reset the counter
-				counter = 0;
-
-				tempVal = currColumn;
-
-				// load ducking 
-				for (;currColumn < (tempVal + Constants.SPRITES_DUCKING_NUM); currColumn++)
-				{
-					playerSprites[player][Constants.PLAYER_DUCKING][counter] = 
-							grabSprite(spriteSheet, Constants.SPRITESHEET_BOX_WIDTH, 
-									Constants.SPRITESHEET_BOX_HEIGHT, player, currColumn, Constants.PLAYER_WIDTH, 
-									Constants.PLAYER_HEIGHT);
-
-					++counter;
-				}
-
-				// reset the counter
-				counter = 0;
-
-				tempVal = currColumn;
+				// load ducking
+				currColumn = loadPlayerConstants("SPRITES_DUCKING_NUM", "PLAYER_DUCKING", currColumn, spriteSheet, player);
 
 				// load hurt
-				for (;currColumn <  tempVal + Constants.SPRITES_HURT_NUM; currColumn++)
-				{
-					playerSprites[player][Constants.PLAYER_HURT][counter] = 
-							grabSprite(spriteSheet, Constants.SPRITESHEET_BOX_WIDTH, 
-									Constants.SPRITESHEET_BOX_HEIGHT, player, currColumn, Constants.PLAYER_WIDTH, 
-									Constants.PLAYER_HEIGHT);
-
-					++counter;
-				}
-
-				// reset the counter
-				counter = 0;
-
-				tempVal = currColumn;
+				currColumn = loadPlayerConstants("SPRITES_HURT_NUM", "PLAYER_HURT", currColumn, spriteSheet, player);
 
 				// load jumping
-				for (;currColumn < tempVal + Constants.SPRITES_JUMPING_NUM; currColumn++)
-				{
-					playerSprites[player][Constants.PLAYER_JUMPING][counter] = 
-							grabSprite(spriteSheet, Constants.SPRITESHEET_BOX_WIDTH, 
-									Constants.SPRITESHEET_BOX_HEIGHT, player, currColumn, Constants.PLAYER_WIDTH, 
-									Constants.PLAYER_HEIGHT);
-
-					++counter;
-				}
-
-				// reset the counter
-				counter = 0;
-
-				tempVal = currColumn;
+				currColumn = loadPlayerConstants("SPRITES_JUMPING_NUM", "PLAYER_JUMPING", currColumn, spriteSheet, player );
 
 				// load standing
-				for (;currColumn < tempVal + Constants.SPRITES_STANDING_NUM; currColumn++)
-				{
-					playerSprites[player][Constants.PLAYER_STANDING][counter] = 
-							grabSprite(spriteSheet, Constants.SPRITESHEET_BOX_WIDTH, 
-									Constants.SPRITESHEET_BOX_HEIGHT, player, currColumn, Constants.PLAYER_WIDTH, 
-									Constants.PLAYER_HEIGHT);
-
-					++counter;
-				}
-			}
-		}
+				currColumn = loadPlayerConstants("SPRITES_STANDING_NUM", "PLAYER_STANDING", currColumn, spriteSheet, player);
+				
+		}	
+	}
 		// if tiles images are selected
 		else if (imageType == Constants.TYPE_TILES)
 		{
@@ -335,6 +270,28 @@ public class Media extends SwingWorker<Integer, Integer>
 		}
 	} // end loadSprites method
 
+	private int loadPlayerConstants(String aux, String aux1, int currColumn, BufferedImage spriteSheet, int player){
+
+		// temp variable
+		int tempVal = currColumn;
+
+		int counter = 0;
+
+		// load walking or ducking or hurt or jumping or standing sprite
+		for (;currColumn < (tempVal + Constants.aux); currColumn++)
+		{
+			playerSprites[player][Constants.aux1][counter] = 
+					grabSprite(spriteSheet, Constants.SPRITESHEET_BOX_WIDTH, 
+							Constants.SPRITESHEET_BOX_HEIGHT, player, currColumn, Constants.PLAYER_WIDTH, 
+							Constants.PLAYER_HEIGHT);
+
+			++counter;
+		}
+		return currColumn;
+	}
+	
+	
+	
 	// grabSprite method grabs sub image from the big image
 	private BufferedImage grabSprite(BufferedImage sheet, int boxWidth, int boxHeight, 
 			int row, int col, int spriteWidth, int spriteHeight)
