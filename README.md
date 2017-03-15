@@ -19,8 +19,7 @@ under free licence and I do not own any of them.
 
 ---
 ## Project Environment
-Clone the repository and import into 
-[Intellij IDEA]("https://www.jetbrains.com/idea/")
+Clone the repository and import into [Intellij IDEA](https://www.jetbrains.com/idea)
 
 ---
 ## Contributors
