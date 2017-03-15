@@ -5,8 +5,7 @@
 A platform game features an alien stuck on Cygrosk planet and his journey to espace
 
 #### Overview
-A project created in Grade 12 Computer science class. This is my first large
-scale Java project. I have only added one level because of time
+A project created in Grade 12 Computer science class. I have only added one level because of time
 limits. Some parts of code are adopted from Java books
 and Youtube tutorials. Game resources and sprites are downloaded
 under free licence and I do not own any of them.
@@ -20,7 +19,8 @@ under free licence and I do not own any of them.
 
 ---
 ## Project Environment
-Clone the repository and import into Intellij IDEA or Eclipse
+Clone the repository and import into 
+[Intellij IDEA]("https://www.jetbrains.com/idea/")
 
 ---
 ## Contributors
